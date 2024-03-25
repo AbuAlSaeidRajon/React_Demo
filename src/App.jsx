@@ -5,20 +5,21 @@ import { useState } from 'react'
 function App() {
   const [counter, setCounter] = useState("for example")
   const [persons, setPersons] = useState([
-    {name:"Saeid", title:"Full Stack Web Developer", location:"Helsinki"}, 
-    {name:"Jake", title:"Developer", location:"Tampere"}, 
-    {name:"Joe", title:"Designer", location:"Lappeenranta"}
+    { id:1, name:"Saeid", title:"Full Stack Web Developer", location:"Helsinki"} , 
+    { id:2, name:"Jake", title:"Developer", location:"Tampere" }, 
+    { id:3, name:"Joe", title:"Designer", location:"Lappeenranta" },
   ]);
 
   return (
     <>
     <p>Counter: {counter}</p>
     {persons.map((person) => (
-      <>
-    <p>{person.name}</p>
-    <p>{person.title}</p>
-    <p>{person.location}</p>
-      </>
+      <Box
+      key={person.id}
+    name={person.name}
+    title={person.title}
+    location={person.location}
+      />
     ))}
     </>
   );
