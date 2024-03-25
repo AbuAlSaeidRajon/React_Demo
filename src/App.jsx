@@ -28,6 +28,8 @@ function App() {
     <button onClick={clickDeHandler}>Decresed by 1</button> <br /> <br />
     <button onClick={clickZeroHandler}>Back to 0</button>
     {persons.map((person) => (
+    // here we use list and keys (map) method
+
       <Box
       key={person.id}
     name={person.name}
